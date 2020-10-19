@@ -1,0 +1,41 @@
+record {
+    boolean a;
+    integer b;
+    boolean c;
+    integer d;
+} sampleRecord;
+
+array [10] integer sampleArray;
+
+array [10] sampleRecord sampleArray2;
+
+procedure main()
+    sampleArray a1,
+    sampleArray2 a2,
+    sampleRecord r1,
+    integer i,
+    integer j,
+    boolean b1,
+    boolean b2
+{
+    a1[0].c <- true
+    a1[1].a <- false
+    b1 <- a1[1].a
+    b2 <- a1[0].c
+
+    i <- a1[0].b + 2*9 - 14/7
+
+    r1.b <- -2
+
+    while b1 and b2 or b1 and not b2 or true do
+        write "hello "
+        if b1 == true then
+            writeln "world!"
+            b1 <- not b1
+        else
+            writeln "there!"
+            b1 <- not b1
+            b2 <- not b2
+        fi
+    od
+}
