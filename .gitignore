@@ -1,5 +1,7 @@
 *
 
+!readme-assets/*.png
+!readme-assets/*.roo
 !.gitignore
 !README.md
 !*.sublime-syntax
