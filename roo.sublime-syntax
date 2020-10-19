@@ -19,6 +19,7 @@ contexts:
     - include: keywords
     - include: numbers
     - include: strings
+    - include: booleans
 
   keywords:
     # Keywords are if, else for and while.
@@ -26,12 +27,16 @@ contexts:
     # strings in YAML. When using single quoted strings, only single quotes
     # need to be escaped: this is done by using two single quotes next to each
     # other.
-    - match: '\b(and|array|boolean|call|while|do|od|or|procedure|read|record|if|else|fi|integer|not|false|true|val|write|writeln)\b'
+    - match: '\b(and|array|boolean|call|while|do|od|or|procedure|read|record|if|else|fi|integer|not|then|val|write|writeln)\b'
       scope: keyword.control.roo
 
   numbers:
     - match: '\b(-)?[0-9]+\b'
       scope: constant.numeric.roo
+
+  booleans:
+    - match: '\b(false|true)\b'
+      scope: constant.language.roo
 
   strings:
     # Strings begin and end with quotes, and use backslashes as an escape
